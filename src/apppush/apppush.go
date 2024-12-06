@@ -109,7 +109,6 @@ func main(){
 		cf.Stdlog.Println(status, "\nError: ", err)
 		os.Exit(1)
 	}
-
 	fmt.Println(status)
 }
 
