@@ -90,7 +90,7 @@ func resultProcess(wg *sync.WaitGroup){
 				resCode = error_code.String
 			}
 			db.Exec("update DHN_REQUEST_APP set message_type = 'at', remark4 = '" + resultdate.String + "', remark5 = '" + resCode + "' where msgid = '" + extra2.String + "'")
-			db.Exec("update " + cf.Conf.APP_RESPONSE_TABLE + " set extra3 = 'Y' where queueidx = '" + queueidx.String + "' and msgidx = '" + msgidx.String + "'")
+			db.Exec("update " + cf.Conf.APP_RESPONSE_TABLE + " set extra3 = 'Y' where queueidx = '" + queueidx.String + "'")
 
 			if len(sucIds) >= 500 {
 				insRes(sucIds)
